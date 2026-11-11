@@ -1,0 +1,15 @@
+{
+  "settings": {
+    "timeout": 3.0,
+    "concurrency": 8,
+    "monitor_interval": 30,
+    "try_query": true,
+    "database_path": "data/minescope.db",
+    "report_dir": "reports",
+    "log_level": "WARNING"
+  },
+  "servers": [
+    { "name": "Example Java", "edition": "java", "address": "play.example.net:25565" },
+    { "name": "Example Bedrock", "edition": "bedrock", "address": "bedrock.example.net:19132" }
+  ]
+}

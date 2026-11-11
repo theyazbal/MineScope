@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "minescope"
+version = "1.0.0"
+description = "MineScope — Minecraft Server Intelligence Platform (Java and Bedrock status, query, monitoring and reporting)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "TheYAZBAL" }]
+keywords = ["minecraft", "server", "monitoring", "status", "bedrock", "java", "raknet"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+    "Topic :: System :: Monitoring",
+]
+dependencies = []
+
+[project.optional-dependencies]
+rich = ["rich>=13.7"]
+dev = ["pytest>=8", "pytest-cov>=5", "ruff>=0.5", "mypy>=1.10"]
+
+[project.urls]
+Homepage = "https://github.com/TheYAZBAL"
+
+[project.scripts]
+minescope = "minescope.cli.app:main"
+
+[tool.setuptools.packages.find]
+include = ["minescope*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W"]
+ignore = ["E701", "E702"]
+
+[tool.mypy]
+python_version = "3.10"
+ignore_missing_imports = true

@@ -1,0 +1,22 @@
+"""Project-wide constants."""
+
+from __future__ import annotations
+
+APP_NAME = "MineScope"
+FULL_NAME = "MineScope — Minecraft Server Intelligence Platform"
+VERSION = "1.0.0"
+ORGANIZATION = "DevStudio"
+OWNER = "TheYAZBAL"
+LEAD_DEVELOPER = "TheYAZBAL"
+GITHUB_URL = "https://github.com/TheYAZBAL"
+
+DEFAULT_JAVA_PORT = 25565
+DEFAULT_BEDROCK_PORT = 19132
+DEFAULT_TIMEOUT = 3.0
+MIN_TIMEOUT = 0.2
+MAX_TIMEOUT = 30.0
+DEFAULT_CONCURRENCY = 8
+MAX_CONCURRENCY = 64
+MIN_MONITOR_INTERVAL = 5.0
+DEFAULT_MONITOR_INTERVAL = 30.0
+SCHEMA_VERSION = 1
